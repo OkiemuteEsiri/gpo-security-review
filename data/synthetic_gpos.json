@@ -1,0 +1,26 @@
+{
+  "gpos": [
+    {
+      "name": "Legacy Workstation Administration",
+      "scope": ["All Workstations"],
+      "settings": {
+        "local_admin_group": "Domain Users",
+        "process_creation_auditing": false,
+        "allow_rdp": true,
+        "rdp_nla_required": false,
+        "powershell_execution": "unsigned_allowed"
+      }
+    },
+    {
+      "name": "Secure Admin Workstations",
+      "scope": ["Privileged Access Workstations"],
+      "settings": {
+        "local_admin_group": "Tier0-Workstation-Admins",
+        "process_creation_auditing": true,
+        "allow_rdp": false,
+        "rdp_nla_required": true,
+        "powershell_execution": "signed_only"
+      }
+    }
+  ]
+}
